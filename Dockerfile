@@ -1,7 +1,7 @@
 FROM hashicorp/terraform:0.14.9
 
 RUN apk update && apk upgrade
-RUN apk add bash openssh git vim make curl
+RUN apk add bash openssh git vim make curl jq
 
 RUN touch /root/.bashrc \
     && terraform -install-autocomplete
